@@ -2,10 +2,10 @@ public final static String e = "271828182845904523536028747135266249775724709369
 
 void setup() 
 {
-  for (int pos = 0; pos < e.length()-9; pos++) 
+  for (int i = 0; i < e.length()-9; i++) 
   {
     double test = 
-       Double.parseDouble(e.substring(pos, pos+10));
+       Double.parseDouble(e.substring(i, i+10));
     if(isPrime(test) == true)   
     {
       System.out.println(test);
@@ -15,8 +15,8 @@ void setup()
 }
 boolean isPrime(double num) 
 {
-  for (int i = 2; i < Math.sqrt(num); i++)
-    if (num % i == 0)
+  for (int j = 2; j < Math.sqrt(num); j++)
+    if (num % j == 0)
       return false;
   return true;
 }
